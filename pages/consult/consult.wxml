@@ -1,0 +1,14 @@
+<view class='contanier'>
+
+  <view class="question">
+    <textarea placeholder="请尽量可能详细的描述您的问题,以便我们来帮助您解决" placeholder-class="question-text"  name="consult" bindinput ="consultInput" value='{{consult}}'/>
+  </view>
+  
+  <view class='phone'>
+    <image  class='contanier-image' src='/images/contanier.png'></image>
+    <input name="phone" bindinput ="phoneInput" placeholder="这个只有在按钮点击的时候才聚焦" placeholder-class="phone-text" value='{{phone}}'/> 
+  </view>
+
+  <view bindtap='onSubmit' class='submit'>立刻咨询</view>
+
+</view>

@@ -1,0 +1,36 @@
+{
+  "pages": [
+      "pages/consult/consult",
+      "pages/test/test",
+      "pages/index/index",
+      "pages/personal/personal"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#4993f4"
+  },
+  "tabBar": {
+    "selectedColor": "#d25161",
+    "borderStyle": "white",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/tab/index.png",
+        "selectedIconPath": "images/tab/index-hl.png"
+      },
+      {
+        "pagePath": "pages/consult/consult",
+        "text": "快速咨询",
+        "iconPath": "images/tab/sport.png",
+        "selectedIconPath": "images/tab/sport-hl.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "个人中心",
+        "iconPath": "images/tab/my.png",
+        "selectedIconPath": "images/tab/my-hl.png"
+      }
+    ]
+  }
+}
