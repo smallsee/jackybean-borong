@@ -1,2 +1,18 @@
-<!--pages/personal/personal.wxml-->
-<text>pages/personal/personal.wxml</text>
+<view class="contaner">
+<view class='user' wx:if="{{user}}">
+  <image class='user-image' src='{{user.avatarUrl}}'></image>
+  <text class='user-name'>{{user.nickName}}</text>
+</view>
+<view class='user' wx:if="{{!user}}" bindtap='onLogin'>
+  <view class='login'>
+    <text class='login-text'>登陆</text>
+  </view>
+</view>
+<view class='main' wx:if="{{user}}" bindtap='onlineConsult'>
+  <view class='consult-box'>
+    <image class='consult-icon' src='/images/comments.png'></image>
+    <text  class='consult-text' >在线咨询</text>
+  </view>
+</view>
+
+</view>

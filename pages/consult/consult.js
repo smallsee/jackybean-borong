@@ -39,6 +39,7 @@ Page({
    */
   detection: function (phone, consult) {
     var phoneRule = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/; 
+
     if (!phone) {
       wx.showToast({
         title: "电话不能为空哦",
@@ -95,8 +96,34 @@ Page({
     userInfo['consult'].push(consult)
     var user = JSON.stringify(userInfo)
     wx.setStorageSync('userInfo', user);
-
     this.setValue()
+    this.putAdmin(name, phone, consultText)
+  },
+  /**
+   * 上传至后台
+   */
+  putAdmin: function (name, phone, consultText) {
+    wx.request({
+      url: 'http://127.0.0.1:8000/user_operation/consult/',
+      header: {
+        "Content-Type": "application/json"
+      },
+      method: "POST",
+      data: { 
+        name: name,
+        phone: phone,
+        consult: consultText
+       },
+      success: function (res) {
+        if (res.statusCode === 201) {
+          wx.showToast({
+            title: "上传到服务器成功",
+            duration: 2000,
+            icon: "success"
+          })
+        }
+      }
+    })
   },
   /**
    * 设置选项栏的值，并且提醒成功
@@ -107,7 +134,7 @@ Page({
       consult: ''
     })
     wx.showToast({
-      title: "提交成功",
+      title: "本地储存成功",
       duration: 1000,
       icon: "success"
     })
