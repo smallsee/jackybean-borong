@@ -1,0 +1,93 @@
+page{
+  background-color: #e2e0e0;
+}
+
+.container{
+  display: flex;
+  flex-direction: column
+}
+
+.header{
+  margin-top: 10rpx;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  padding: 0 10rpx;
+}
+
+.block-yellow{
+  width: 10rpx;
+  height: 60rpx;
+  background-color: orange
+}
+
+.header-text{
+  margin-left: 30rpx;
+  line-height: 60rpx;
+  font-size: 35rpx;
+  font-weight: bold
+}
+
+.user{
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.user-image{
+  margin-top: 30rpx;
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  border: 4rpx solid orange
+}
+
+.user-name{
+  font-size: 30rpx;
+  margin-left: 20rpx;
+  line-height: 200rpx;
+}
+
+.item{
+  background-color: white;
+  box-sizing: border-box;
+  padding: 10rpx 10rpx 6rpx 10rpx;
+  margin: 30rpx auto;
+  width: 95%;
+  overflow: hidden;
+  box-shadow: 0rpx 1rpx 4rpx #8f8b8b;
+}
+
+.content{
+  display: block;
+  font-size: 28rpx;
+  min-height: 60rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+.date{
+  margin-top: 10rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.time{
+  font-size: 26rpx;
+}
+
+.callback{
+  margin-left: 20rpx;
+}
+
+.horizon{
+  margin: 10rpx auto;
+  width: 95%;
+  height: 10rpx;
+  border-radius: 10rpx;
+  background-color: #e8e8e8;
+}

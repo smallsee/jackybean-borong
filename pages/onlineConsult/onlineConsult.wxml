@@ -1,0 +1,29 @@
+<view class="container">
+  <view class='header'>
+    <view class='block-yellow'></view>
+    <text class='header-text'>我的在线咨询</text>
+  </view>
+
+  <view class='user'>
+    <image src='{{user.avatarUrl}}' class="user-image"></image>
+    <text class="user-name">{{user.nickName}}</text>
+  </view>
+
+  <view class='horizon'></view>
+  <view class='main'>
+
+    <block wx:for="{{userInfo.consult}}" wx:for-item="item" wx:for-index="idx">
+      <view class='item'>
+        <text class='content' decode="{{true}}">&nbsp;&nbsp;{{item.consult}}</text>
+        <view class='date'>
+          <text class='time'>2017-12-25</text>
+          <text class='callback'>待回复</text>
+        </view>
+      </view>
+    </block>
+
+  </view>
+
+  
+
+</view>

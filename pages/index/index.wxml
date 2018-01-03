@@ -25,5 +25,31 @@
     </swiper-item>
   </swiper>
 
+  <view class='news'>
+    <view class='news-title'>
+        <image src='/images/news.png' class='news-title_image'></image>
+        <text class='news-title_text'>今日要闻</text>
+    </view>
+ 
+      <view class='news-item'>
+        <image src='/images/banner4.jpg' class='news-item_image'></image>
+        <text class='news-item_text'>今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻</text>
+        <text class='news-item_info'>中国证券</text>
+      </view>
+
+       <view class='news-item'>
+        <image src='/images/banner4.jpg' class='news-item_image'></image>
+        <text class='news-item_text'>今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻</text>
+        <text class='news-item_info'>中国证券</text>
+      </view>
+
+       <view class='news-item'>
+        <image src='/images/banner4.jpg' class='news-item_image'></image>
+        <text class='news-item_text'>今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻</text>
+        <text class='news-item_info'>中国证券</text>
+      </view>
+
+  </view>
+
 
 </view>

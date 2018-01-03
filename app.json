@@ -1,9 +1,10 @@
 {
   "pages": [
-          "pages/personal/personal",
-      "pages/consult/consult",
-      "pages/test/test",
-      "pages/index/index"
+    "pages/index/index",
+    "pages/personal/personal",
+    "pages/onlineConsult/onlineConsult",
+    "pages/consult/consult",
+    "pages/test/test"
   ],
   "window": {
     "navigationBarBackgroundColor": "#4993f4"
