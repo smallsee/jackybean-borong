@@ -4,6 +4,7 @@ page{
  background-color: #e8e8e8;
 }  
 
+/*头部*/
 .header{
 	box-sizing: border-box;
 	padding: 15rpx 10rpx 20rpx 10rpx;
@@ -53,7 +54,7 @@ page{
   padding: 0;
 }
 
-
+/*banner*/
 swiper{
      width:100%;
      height:280rpx;
@@ -63,6 +64,20 @@ swiper image{
      height:400rpx;
  }
 
+ /*智库 路演*/
+  .chunk{
+   margin-top: 30rpx;
+   box-sizing: border-box;
+   padding: 10rpx;
+   width: 100%;
+   background-color: white
+ }
+  .chunk-item{
+    width: 100%;
+    height: 200rpx;
+  }
+
+/*今日要闻*/
 .news{
   margin-top: 30rpx;
   border-top: 2rpx solid #e8e8e8;
@@ -112,5 +127,3 @@ swiper image{
   line-height: 40rpx;
 }
 
-
- 

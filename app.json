@@ -1,7 +1,11 @@
 {
   "pages": [
+      "pages/project/project",
     "pages/index/index",
     "pages/personal/personal",
+    "pages/resource/resource",
+ 
+    "pages/thinkTank/thinkTank",
     "pages/onlineConsult/onlineConsult",
     "pages/consult/consult",
     "pages/test/test"
@@ -21,14 +25,20 @@
         "selectedIconPath": "images/tab/index-hl.png"
       },
       {
-        "pagePath": "pages/consult/consult",
-        "text": "快速咨询",
-        "iconPath": "images/tab/sport.png",
-        "selectedIconPath": "images/tab/sport-hl.png"
+        "pagePath": "pages/project/project",
+        "text": "项目",
+        "iconPath": "images/tab/Viewlist.png",
+        "selectedIconPath": "images/tab/Viewlist-hl.png"
       },
       {
-        "pagePath": "pages/personal/personal",
-        "text": "个人中心",
+        "pagePath": "pages/thinkTank/thinkTank",
+        "text": "智库",
+        "iconPath": "images/tab/book.png",
+        "selectedIconPath": "images/tab/book-hl.png"
+      },
+      {
+        "pagePath": "pages/resource/resource",
+        "text": "资源",
         "iconPath": "images/tab/my.png",
         "selectedIconPath": "images/tab/my-hl.png"
       }

@@ -1,7 +1,7 @@
 <view class='container'>
-
+<!--头部  -->
   <view class='header'>
-    <view class='person'>
+    <view class='person' bindtap='skipPerson'>
       <image class='person-image' src='/images/person.png'></image>
     </view>
     <view class='search'>
@@ -13,6 +13,7 @@
 
   </view>
 
+<!--banner  -->
   <swiper indicator-dots="true" autoplay="true" interval="5000">
     <swiper-item>
       <image id="7" src="/images/banner4.jpg"></image>
@@ -25,6 +26,17 @@
     </swiper-item>
   </swiper>
 
+<!--博融智库  -->
+ <view class="think-tank chunk">
+      <image class='chunk-item' src='/images/01.jpg'></image>
+ </view>
+
+  <!--路演  -->
+   <view class="think-tank chunk">
+      <image class='chunk-item' src='/images/02.jpg'></image>
+ </view>
+
+<!--今日要闻  -->
   <view class='news'>
     <view class='news-title'>
         <image src='/images/news.png' class='news-title_image'></image>

@@ -4,13 +4,18 @@ Page({
   },
   onLoad: function () {
     var that = this;
-    wx.getUserInfo({
+    wx.login({
       success: function (res) {
-        that.setData({
-          user: res.userInfo
+        wx.getUserInfo({
+          success: function (res) {
+            that.setData({
+              user: res.userInfo
+            })
+          }
         })
       }
-    })
+    });
+    
   },
   onLogin: function() {
     wx.checkSession({
