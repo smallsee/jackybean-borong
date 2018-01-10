@@ -1,0 +1,13 @@
+<view class='container'>
+  <text class='user-name'>小海</text>
+  <view class='introduce'>
+    <image src='/images/person.jpg' class='user-image'></image>
+
+   
+  <scroll-view scroll-y="true" class='user-info'>
+     <text class='user-introduce'>asdsadasdasda</text>
+  </scroll-view>
+  </view>
+
+  <view class='order'>立刻预约</view>
+</view>

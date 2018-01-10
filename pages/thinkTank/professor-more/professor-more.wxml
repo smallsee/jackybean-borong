@@ -1,0 +1,34 @@
+<view class='container'>
+  <!--头部  -->
+  <view class='header'>
+    <view class='search'>
+      <icon type="search" class="search-img" size="13" color="#405f80"></icon>
+      <input type="text" placeholder="搜索你想要的产品" placeholder-class="placeholder" />
+    </view>
+  </view>
+
+  <!--专家  -->
+    <view class='professor'>
+    <!-- <text class='professor-title'>专家介绍</text> -->
+    <view class='professor-main'>
+      <view class='professor-item'>
+        <image class='professor-item_image' src='/images/person.jpg'></image>
+        <text class='professor-item_text'>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</text>
+      </view>
+      <view class='professor-item'>
+        <image class='professor-item_image' src='/images/person.jpg'></image>
+        <text class='professor-item_text'>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</text>
+      </view>
+
+      <view class='professor-item'>
+        <image class='professor-item_image' src='/images/person.jpg'></image>
+        <text class='professor-item_text'>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</text>
+      </view>
+
+      <view class='professor-item'>
+        <image class='professor-item_image' src='/images/person.jpg'></image>
+        <text class='professor-item_text'>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</text>
+      </view>
+    </view>
+  </view>
+</view>

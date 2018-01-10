@@ -1,0 +1,38 @@
+.container{
+  display: flex;
+  flex-direction: column
+}
+.user-name{
+  font-size: 32rpx;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 20rpx;
+}
+.introduce{
+  margin-top: 20rpx;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+}
+.user-image{
+  width: 100%;
+}
+.user-info{
+  margin-top: 20rpx;
+  width: 100%;
+  height: 500rpx;
+
+}
+
+.order{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 32rpx;
+  font-weight: 600;
+  color: white;
+  background-color: #f85f48;
+}

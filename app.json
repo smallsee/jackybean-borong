@@ -1,14 +1,24 @@
 {
   "pages": [
-      "pages/project/project",
+        "pages/resource/resource",
+        "pages/resource/resource-detail/resource-detail",
+  
+        "pages/thinkTank/thinkTank",
+        
+      "pages/thinkTank/professor-detail/professor-detail",
+      
+  
+        "pages/thinkTank/professor-more/professor-more",
+ 
+      "pages/test/test",
+  
+    "pages/project/project",
+    "pages/project/project-detail/project-detail",
     "pages/index/index",
     "pages/personal/personal",
-    "pages/resource/resource",
- 
-    "pages/thinkTank/thinkTank",
+  
     "pages/onlineConsult/onlineConsult",
-    "pages/consult/consult",
-    "pages/test/test"
+    "pages/consult/consult"
   ],
   "window": {
     "navigationBarBackgroundColor": "#4993f4"

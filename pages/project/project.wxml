@@ -8,24 +8,12 @@
 <view class='project-item' hidden="{{currentTab!=0}}"> 
 <!--今日要闻  -->
 
-      <view class='news-item'>
+      <view class='news-item' bindtap='skipProject'>
         <image src='/images/banner4.jpg' class='news-item_image'></image>
         <text class='news-item_text news-item_title'>今日要闻</text>
          <text class='news-item_text'>今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻</text>
       </view>
 
-
-<view class='news-item'>
-        <image src='/images/banner4.jpg' class='news-item_image'></image>
-        <text class='news-item_text news-item_title'>今日要闻</text>
-         <text class='news-item_text'>今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻</text>
-      </view>
-
-      <view class='news-item'>
-        <image src='/images/banner4.jpg' class='news-item_image'></image>
-        <text class='news-item_text news-item_title'>今日要闻</text>
-         <text class='news-item_text'>今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻</text>
-      </view>
 </view>
 
 <view class='project-item' hidden="{{currentTab!=1}}">  

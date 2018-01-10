@@ -1,0 +1,22 @@
+<view class='container'>
+  <view class='professor'>
+    <image class='professor-image' src='/images/person.jpg'></image>
+    <text class='professor-text'>小海.......</text>
+  </view>
+
+  <view class='order'>预约专家</view>
+
+  <view class='project-introduce'>
+
+    <view class='title-box'>
+      <image src='/images/modou_red.png'></image>
+      <text class="title">专家介绍</text>
+    </view>
+    <text class='info'>魔豆启城，品牌管理、传播与营销服务商，总部位于中国广州。</text>
+    <text class='info'>业务主要涵盖品牌整合营销传播、新媒体营销、品牌管理咨询、舆情公关、</text>
+    <text class='info'>品牌形象设计、品牌活动策划与执行、互联网技术应用开发等。</text>
+    <view class='horzition'></view>
+    <view class='ball'></view>
+  </view>
+
+</view>

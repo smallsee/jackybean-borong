@@ -53,53 +53,9 @@ page{
   line-height: 20rpx;
   padding: 0;
 }
-/*banner*/
-swiper{
-     width:100%;
-     height:280rpx;
- }
-swiper image{
-     width:100%;
-     height:400rpx;
- }
 
- /*质询*/
- .consultation{
-   margin-top: 20rpx;
-   display: flex;
-   flex-direction: row;
-   justify-content: space-around;
-   height: 80rpx;
-   font-size: 24rpx;
- }
- .consultation text{
-    color: white;
- }
- .consultation image{
-   width: 40rpx;
-   height: 40rpx;
-   margin-right: 20rpx;
- }
- .consultation-item{
-   display: flex;
-   flex-direction: row;
-    box-sizing: border-box;
-   padding: 20rpx 0 0 90rpx;
-   line-height: 40rpx;
- }
-  .consultation-online{
-   width: 45%;
-   height: 100%;
-   background-color: #f7904e;
 
- }
- .consultation-phone{
-   width: 45%;
-   height: 100%;
-   background-color: #1eb16f;
- }
-
- /*专家介绍*/
+/*专家介绍*/
  .professor{
    margin-top: 40rpx;
   display: flex;  

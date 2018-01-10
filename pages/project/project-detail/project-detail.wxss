@@ -1,0 +1,90 @@
+.container{
+    display: flex;  
+  flex-direction: column; 
+}
+
+/*海报*/
+.poster{
+  position: relative;
+}
+.poster-image{
+  width: 100%;
+  height: 400rpx;
+}
+.poster-logo{
+  position: absolute;
+  bottom: -30rpx;
+  left: 50%;
+  margin-left: -100rpx;
+  width: 200rpx;
+  height: 120rpx;
+}
+
+/*项目介绍*/
+.project-introduce{
+  margin-top: 50rpx;
+    display: flex;
+  flex-direction: column;
+}
+.title-box{
+  display: flex;
+  flex-direction: row;
+  margin: 10rpx auto 10rpx;
+}
+
+.title-box image{
+ width: 80rpx;
+ height: 80rpx;
+}
+.title-box .title{
+  font-size: 35rpx;
+  color: #cc0000;
+  line-height: 70rpx;
+  margin-left: 20rpx;
+  font-weight: 500;
+}
+
+.info{
+  line-height: 35rpx;
+  text-align: center;
+  font-size: 22rpx;
+
+}
+
+.horzition{
+  width: 80%;
+  height: 4rpx;
+  margin: 40rpx auto;
+  background-color: #868686;
+}
+
+.ball{
+  width: 20rpx;
+  height: 20rpx;
+  margin: -50rpx auto 40rpx;
+  border-radius: 50%;
+  background-color: #868686;
+}
+
+/*立刻咨询*/
+.consultation{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100rpx;
+  background-color: #1eb16f;
+  text-align: center;
+  line-height: 100rpx;
+  color: white;
+}
+
+/*项目内容*/
+.project-main{
+  width: 100%;
+  height: 300rpx;
+}
+.project-main_item{
+  width: 100%;
+  height: 200rpx;
+}
+

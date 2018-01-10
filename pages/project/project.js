@@ -8,4 +8,9 @@ Page({
       currentTab: e.currentTarget.dataset.idx
     })
   },
+  skipProject: function(e) {
+    wx.navigateTo({
+      url: 'project-detail/project-detail',
+    })
+  }
 })
