@@ -12,5 +12,10 @@ Page({
     wx.navigateTo({
       url: 'resource-detail/resource-detail',
     })
+  },
+  skipJoinFloor: function () {
+    wx.navigateTo({
+      url: '../form/join-floor/join-floor',
+    })
   }
 })

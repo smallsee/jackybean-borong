@@ -1,5 +1,5 @@
 <view class='container'>
-<!--头部  -->
+  <!--头部  -->
   <view class='header'>
     <view class='person' bindtap='skipPerson'>
       <image class='person-image' src='/images/person.png'></image>
@@ -13,7 +13,7 @@
 
   </view>
 
-<!--banner  -->
+  <!--banner  -->
   <swiper indicator-dots="true" autoplay="true" interval="5000">
     <swiper-item>
       <image id="7" src="/images/banner4.jpg"></image>
@@ -26,40 +26,34 @@
     </swiper-item>
   </swiper>
 
-<!--博融智库  -->
- <view class="think-tank chunk">
-      <image class='chunk-item' src='/images/01.jpg'></image>
- </view>
+  <!--博融智库  -->
+  <view class="think-tank chunk">
+    <image class='chunk-item' src='/images/01.jpg'></image>
+  </view>
 
   <!--路演  -->
-   <view class="think-tank chunk">
-      <image class='chunk-item' src='/images/02.jpg'></image>
- </view>
+  <view class="think-tank chunk">
+    <image class='chunk-item' src='/images/02.jpg'></image>
+  </view>
 
-<!--今日要闻  -->
+  <!--今日要闻  -->
   <view class='news'>
     <view class='news-title'>
-        <image src='/images/news.png' class='news-title_image'></image>
-        <text class='news-title_text'>今日要闻</text>
+      <image src='/images/news.png' class='news-title_image'></image>
+      <text class='news-title_text'>今日要闻</text>
     </view>
- 
-      <view class='news-item'>
-        <image src='/images/banner4.jpg' class='news-item_image'></image>
-        <text class='news-item_text'>今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻</text>
-        <text class='news-item_info'>中国证券</text>
-      </view>
 
-       <view class='news-item'>
-        <image src='/images/banner4.jpg' class='news-item_image'></image>
-        <text class='news-item_text'>今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻</text>
-        <text class='news-item_info'>中国证券</text>
+    <block wx:for="{{newsData}}" wx:for-item="item" wx:for-index="index">
+      <view class='news-item' catchtap="skipWeb" data-postId="{{index}}">
+        <image src='{{item.thumbnail_pic_s}}' class='news-item_image'></image>
+        <text class='news-item_text'>{{item.title}}</text>
+        <text class='news-item_info'>{{item.category}}</text>
       </view>
+    </block>
 
-       <view class='news-item'>
-        <image src='/images/banner4.jpg' class='news-item_image'></image>
-        <text class='news-item_text'>今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻今日要闻</text>
-        <text class='news-item_info'>中国证券</text>
-      </view>
+
+
+
 
   </view>
 

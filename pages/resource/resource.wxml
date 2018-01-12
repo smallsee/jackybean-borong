@@ -3,14 +3,14 @@
 
   
   <view class='consultation'>
-    <view class='consultation-item consultation-phone'>
+    <button bindtap='skipJoinFloor' class='consultation-item consultation-phone'>
       <image src='/images/phone.png'></image>
       <text>入驻平台</text>
-    </view>
-    <view class='consultation-item consultation-online'>
+    </button>
+    <button open-type="contact" class='consultation-item consultation-online'>
       <image src='/images/chat.png'></image>
       <text>在线咨询</text>
-    </view>
+    </button>
   </view>
 
 <!--nav  -->

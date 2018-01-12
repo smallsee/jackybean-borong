@@ -22,14 +22,14 @@
 
   <!--质询  -->
   <view class='consultation'>
-    <view class='consultation-item consultation-phone'>
+    <button bindtap='callPhone' class='consultation-item consultation-phone'>
       <image src='/images/phone.png'></image>
       <text>电话咨询</text>
-    </view>
-    <view class='consultation-item consultation-online'>
+    </button>
+    <button open-type="contact" class='consultation-item consultation-online'>
       <image src='/images/chat.png'></image>
       <text>在线咨询</text>
-    </view>
+    </button>
   </view>
 
   <!--专家  -->
@@ -41,19 +41,24 @@
         <image class='professor-item_image' src='/images/person.jpg'></image>
         <text class='professor-item_text'>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</text>
       </view>
-      <view class='professor-item' bindtap='skipProfessorDetail'>
+
+           <view class='professor-item' bindtap='skipProfessorDetail'>
         <image class='professor-item_image' src='/images/person.jpg'></image>
         <text class='professor-item_text'>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</text>
       </view>
-      <view class='professor-item' bindtap='skipProfessorDetail'>
+
+           <view class='professor-item' bindtap='skipProfessorDetail'>
         <image class='professor-item_image' src='/images/person.jpg'></image>
         <text class='professor-item_text'>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</text>
       </view>
-      <view class='professor-item' bindtap='skipProfessorDetail'>
+
+           <view class='professor-item' bindtap='skipProfessorDetail'>
         <image class='professor-item_image' src='/images/person.jpg'></image>
         <text class='professor-item_text'>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</text>
       </view>
     </view>
+
+    
 
     <text class='professor-more' bindtap='skipMoreProfessor'>更多专家>></text>
   </view>
@@ -63,11 +68,13 @@
   <view class='professor-title'>特约平台</view>
 
   <view class='consultation'>
-    <view class='consultation-item consultation-phone'>
+
+    <view bindtap='skipJoinTank' class='consultation-item consultation-phone'>
       <image src='/images/phone.png'></image>
       <text>加入智库</text>
     </view>
-    <view class='consultation-item consultation-online'>
+
+    <view bindtap='skipJoinTank' class='consultation-item consultation-online'>
       <image src='/images/chat.png'></image>
       <text>预约专家</text>
     </view>

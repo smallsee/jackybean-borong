@@ -1,0 +1,14 @@
+@import "../../untils/wxParse/wxParse.wxss";
+
+page{
+
+}
+.container{
+  font-size: 26rpx;
+  color: #515151;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+}

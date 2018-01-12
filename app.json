@@ -1,22 +1,21 @@
 {
   "pages": [
-        "pages/resource/resource",
-        "pages/resource/resource-detail/resource-detail",
+        "pages/test/test",
+      "pages/index/index",
+    "pages/form/join-floor/join-floor",
+        "pages/form/join-tank/join-tank",
   
-        "pages/thinkTank/thinkTank",
-        
-      "pages/thinkTank/professor-detail/professor-detail",
-      
-  
-        "pages/thinkTank/professor-more/professor-more",
- 
-      "pages/test/test",
-  
+    "pages/webview/webview",
+
+
+    "pages/resource/resource",
+    "pages/thinkTank/thinkTank",
+    "pages/resource/resource-detail/resource-detail",
+    "pages/thinkTank/professor-detail/professor-detail",
+    "pages/thinkTank/professor-more/professor-more",
     "pages/project/project",
     "pages/project/project-detail/project-detail",
-    "pages/index/index",
     "pages/personal/personal",
-  
     "pages/onlineConsult/onlineConsult",
     "pages/consult/consult"
   ],

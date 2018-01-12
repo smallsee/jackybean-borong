@@ -97,6 +97,7 @@ page{
   font-size: 24rpx;
   background-color: #4693ff;
   height: 40rpx;
+  line-height: 40rpx;
   padding: 0 6rpx;
   margin-left: 10rpx;
 }

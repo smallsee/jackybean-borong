@@ -1,27 +1,33 @@
-// pages/test/test.js
 Page({
-  getPhoneNumber: function (e) {
-    console.log(e.detail.errMsg)
-    console.log(e.detail.iv)
-    console.log(e.detail.encryptedData)
 
-    if (e.detail.errMsg == 'getPhoneNumber:fail user deny') {
-      wx.showModal({
-        title: '提示',
-        showCancel: false,
-        content: '未授权',
-        success: function (res) { }
-      })
-    } else {
-      wx.showModal({
-        title: '提示',
-        showCancel: false,
-        content: '同意授权',
-        success: function (res) {
-          console.log('返回：',res)
-         }
-      })
-    }
+  getPhoneNumber: function (e) {
+
+    wx.login({
+      success: function(res_login){
+        if (res_login.code) {
+          wx.getUserInfo({
+            success: function(res_user) {
+              wx:wx.request({
+                url: 'https://www.lifanh.com/wx/login',
+                data: {
+                  code: res_login.code,
+                  encryptedData: res_user.encryptedData,
+                  iv: res_user.iv
+                },
+                header: {
+                  'content-type': 'application/json'
+                },
+                method: 'GET',
+                success: function(res) {
+                  wx.setStorageSync('openId', res.data);
+                },
+              })
+            }
+          })    
+        }
+      }
+    })
+
   },
   //播放  
   listenerButtonPlay: function () {

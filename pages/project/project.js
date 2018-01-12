@@ -1,6 +1,6 @@
 Page({
   data: {
-    navbar: ['推荐', '市场', '行业', '公司', '研究', '学院'],
+    navbar: ['推荐', '市场', '行业', '公司', '研究', '收藏'],
     currentTab: 0
   },
   navbarTap: function (e) {
