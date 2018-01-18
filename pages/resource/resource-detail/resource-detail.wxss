@@ -1,6 +1,8 @@
+@import "../../../untils/wxParse/wxParse.wxss";
 .container{
   display: flex;
-  flex-direction: column
+  flex-direction: column;
+  padding-bottom: 140rpx;
 }
 .user-name{
   font-size: 32rpx;
@@ -18,14 +20,19 @@
   width: 100%;
 }
 .user-info{
-  margin-top: 20rpx;
   width: 100%;
-  height: 500rpx;
-
+  margin-top: 20rpx;
+  font-size: 24rpx;
+  text-align: left;
+  line-height: 40rpx;
 }
-
-.order{
-  position: absolute;
+.user-info image{
+  width: 80%;
+}
+.order-box{
+  box-sizing: border-box;
+  padding-top: 10rpx;
+  position: fixed;
   bottom: 0;
   width: 100%;
   height: 100rpx;
@@ -34,5 +41,10 @@
   font-size: 32rpx;
   font-weight: 600;
   color: white;
-  background-color: #f85f48;
+  background-color: white;
+}
+.order{
+   background-color: #f85f48;
+   width: 100%;
+   height: 90rpx;
 }

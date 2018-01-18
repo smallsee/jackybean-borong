@@ -1,36 +1,38 @@
+var app = getApp();
 Page({
   data: {
     user: false,
-    userInfo: false
+    userInfo: false,
   },
-  onLoad: function () {
+  onLoad: function (option) {
     var that = this
-    var name = ''
+    var openid = app.globalData.openid;
+    var type = option.type
+    console.log(type)
+    
+    wx.request({
+      url: 'https://www.lifanh.com/api/brformsearch/',
+      header: {},
+      data:{
+        'type': type,
+        'openid': openid
+      },
+      method: 'GET',
+      success: function (res) {
+        that.setData({
+          data: res.data.data
+        })
+      },
+      
+    })
+
+
     wx.getUserInfo({
       success: function (res) {
         that.setData({
           user: res.userInfo
         })
-
-        var userInfo = wx.getStorageSync('userInfo')
-        if (userInfo) {
-          userInfo = JSON.parse(userInfo)
-          that.setData({
-            userInfo: userInfo
-          })
-          that.isUser(userInfo, res.userInfo.nickName)
-        }
-
       }
-    })
-  },
-  isUser: function (userInfo,name) {
-    var that = this;
-    if (userInfo.name == name) {
-      that.setData({
-        userInfo: userInfo
-      })
-      console.log(userInfo)
-    }
+    });
   }
 })

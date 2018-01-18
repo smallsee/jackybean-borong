@@ -1,7 +1,7 @@
 page{  
   display: flex;  
   flex-direction: column;
- background-color: #e8e8e8;
+  background-color: white;
 }  
 
 /*头部*/
@@ -11,7 +11,7 @@ page{
   display: flex;  
   flex-direction: row;
   justify-content: space-around;
-  background-color: #4993f4;
+  background-color: #d50036;
 }
 .person{
   width: 50rpx;
@@ -32,13 +32,13 @@ page{
   border-radius: 50%;
 }
 .search {
-  background-color: #f2f2f2;
+  background-color: white;
   height: 60rpx;
   width: 80%;
   display: flex;
   flex-direction: row;
 	border: 2rpx solid #8a8a8a;
-	border-radius: 10rpx;
+	border-radius: 20rpx;
 }
 
 .search-img {
@@ -57,13 +57,38 @@ page{
 /*banner*/
 swiper{
      width:100%;
-     height:280rpx;
+     height:300rpx;
  }
 swiper image{
      width:100%;
-     height:400rpx;
+     height:300rpx;
  }
-
+/*内容  */
+.content-box{
+  margin-top: 30rpx;
+  background-color: white;
+  width: 100%;
+  height: 250rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.content-item{
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  height: 125rpx;
+  text-align: center;
+  align-items: center;
+  font-size: 34rpx;
+  font-weight: 600;
+  color: black;
+}
+.content-image{
+  width: 60rpx;
+  height: 60rpx;
+  margin-bottom: 10rpx;
+}
  /*智库 路演*/
   .chunk{
    margin-top: 30rpx;

@@ -6,35 +6,75 @@
     </view>
     <view class='search'>
       <icon type="search" class="search-img" size="13" color="#405f80"></icon>
-      <input type="text" placeholder="搜索你想要的产品" placeholder-class="placeholder" />
+      <input type="text" placeholder="搜索智库专家" placeholder-class="placeholder" bindinput="inputSearch" bindconfirm="skipSearch" value='{{search}}'/>
     </view>
 
-    <image class='emial-image' src='/images/email.png'></image>
+    <!-- <image class='emial-image' src='/images/email.png'></image> -->
 
   </view>
 
   <!--banner  -->
   <swiper indicator-dots="true" autoplay="true" interval="5000">
     <swiper-item>
-      <image id="7" src="/images/banner4.jpg"></image>
+      <image src="/images/icon/1.jpg"></image>
     </swiper-item>
     <swiper-item>
-      <image src="/images/banner3.jpg"></image>
+      <image src="/images/icon/1.jpg"></image>
     </swiper-item>
-    <swiper-item>
-      <image src="/images/banner2.jpg"></image>
-    </swiper-item>
+    
   </swiper>
 
-  <!--博融智库  -->
-  <view class="think-tank chunk">
-    <image class='chunk-item' src='/images/01.jpg'></image>
+  <view class='content-box'>
+    <view class='content-item' bindtap='skipTank'>
+      <image src='/images/icon/1.png' class='content-image'></image>
+      <text class='content-text'>智库专家</text>
+    </view>
+
+        <view class='content-item'>
+      <image src='/images/icon/2.png' class='content-image'></image>
+      <text class='content-text'>路演活动</text>
+    </view>
+
+        <view class='content-item'>
+      <image src='/images/icon/3.png' class='content-image'></image>
+      <text class='content-text'>中国好企业</text>
+    </view>
+
+        <view class='content-item'>
+      <image src='/images/icon/4.png' class='content-image'></image>
+      <text class='content-text'>咨询中心</text>
+    </view>
+
+        <view class='content-item'>
+      <image src='/images/icon/5.png' class='content-image'></image>
+      <text class='content-text'>博问</text>
+    </view>
+    
+        <view class='content-item'>
+      <image src='/images/icon/6.png' class='content-image'></image>
+      <text class='content-text'>市值管理</text>
+    </view>
+
+        <view class='content-item'>
+      <image src='/images/icon/7.png' class='content-image'></image>
+      <text class='content-text'>企业家俱乐部</text>
+    </view>
+
+        <view class='content-item'>
+      <image src='/images/icon/8.png' class='content-image'></image>
+      <text class='content-text'>在线课程</text>
+    </view>
   </view>
 
+  <!--博融智库  -->
+  <!-- <view class="think-tank chunk">
+    <image class='chunk-item' src='/images/01.jpg'></image>
+  </view> -->
+
   <!--路演  -->
-  <view class="think-tank chunk">
+  <!-- <view class="think-tank chunk">
     <image class='chunk-item' src='/images/02.jpg'></image>
-  </view>
+  </view> -->
 
   <!--今日要闻  -->
   <view class='news'>

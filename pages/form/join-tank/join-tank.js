@@ -1,6 +1,9 @@
+var app = getApp();
 Page({
-  formSubmit: function(e) {
+  formSubmit: function (e) {
     var that = this;
+    var openid = app.globalData.openid;
+    e.detail.value['openid'] = openid
     wx.request({
       url: 'https://www.lifanh.com/api/brtank',
       method: 'POST',

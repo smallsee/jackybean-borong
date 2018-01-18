@@ -11,7 +11,7 @@ page{
   display: flex;  
   flex-direction: row;
   justify-content: space-around;
-  background-color: #4993f4;
+  background-color: #d50036;
 }
 .person{
   width: 50rpx;
@@ -32,13 +32,13 @@ page{
   border-radius: 50%;
 }
 .search {
-  background-color: #f2f2f2;
+  background-color: white;
   height: 60rpx;
   width: 80%;
   display: flex;
   flex-direction: row;
 	border: 2rpx solid #8a8a8a;
-	border-radius: 20rpx;
+	border-radius: 30rpx;
 }
 
 .search-img {
@@ -60,20 +60,24 @@ swiper{
  }
 swiper image{
      width:100%;
-     height:400rpx;
+     height:280rpx;
  }
-
+/**/
+.padding{
+  box-sizing: border-box;
+  padding: 0 40rpx;
+}
  /*质询*/
  .consultation{
    margin-top: 20rpx;
    display: flex;
    flex-direction: row;
-   justify-content: space-around;
+   justify-content: space-between;
    height: 80rpx;
    font-size: 24rpx;
  }
  .consultation text{
-    color: white;
+      color: #d30137;
  }
  .consultation image{
    width: 40rpx;
@@ -81,22 +85,25 @@ swiper image{
    margin-right: 20rpx;
  }
  .consultation-item{
+   border-radius: 25rpx;
+    border: 2rpx solid #d30137;
    display: flex;
    flex-direction: row;
     box-sizing: border-box;
-   padding: 20rpx 0 0 90rpx;
+   padding: 20rpx 0 0 80rpx;
    line-height: 40rpx;
+   margin: 0
  }
   .consultation-online{
    width: 45%;
    height: 100%;
-   background-color: #f7904e;
+   background-color: rgba(0, 0, 0, 0);
 
  }
  .consultation-phone{
    width: 45%;
    height: 100%;
-   background-color: #1eb16f;
+    background-color: rgba(0, 0, 0, 0);
  }
 
  /*专家介绍*/
@@ -107,35 +114,86 @@ swiper image{
  }
 
  .professor-title{
-   font-size: 32rpx;
+   font-size: 35rpx;
    font-weight: 600;
+   color: #d30137;
+   text-align: left;
+ }
+ .professor-info{
+   font-size: 24rpx;
    color: black;
-   text-align: center;
-   margin-bottom: 30rpx;
+   text-align: left;
+   margin-bottom: 10rpx;
+ }
+ .red-hengxian{
+   width: 100%;
+   height: 2rpx;
+   background-color: #d50036;
+   margin-top: 5rpx;
+ }
+ .red-hengxian_small{
+   width: 43%;
+   height: 2rpx;
+   background-color: #d50036;
+   margin-top: 6rpx;
  }
 .professor-main{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap
+  justify-content: space-between;
+  flex-wrap: wrap;
+
 }
 .professor-item{
-   width: 45%;
-  height: 400rpx;
-  background-color: #e8e8e8;
-  border-top-left-radius: 10rpx;
-  border-top-right-radius: 10rpx;
+   width: 43%;
+  height: 360rpx;
+  box-sizing: border-box;
+  padding-top: 10rpx;
   overflow: hidden;
-  margin-bottom: 30rpx;
 }
+.professor-item_box{
+  display: flex;
+  flex-direction: row;
+
+}
+.professor-item_box_image{
+  box-sizing: border-box;
+  padding-left: 5rpx;
+  letter-spacing: 8rpx;
+  text-align: center;
+  width: 30rpx;
+  height: 80rpx;
+  background-color: #d30137;
+  font-size: 15rpx;
+  color: white;
+  word-break:break-all; 
+  line-height: 15rpx;
+  margin-right: 10rpx;
+}
+
  .professor-item_image{
-    width: 100%;
-    height: 300rpx;
+    width: 98%;
+    max-height: 250rpx;
+    border: 2rpx solid #8a8a8a
  }
  .professor-item_text{
    display: block;
-  font-size: 26rpx;
-  color: gray;
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #daac62;
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  display:-webkit-box; 
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2; 
+  word-break:break-all;
+  line-height: 40rpx;
+ }
+
+ .professor-item_info{
+      display: block;
+  font-size: 24rpx;
+  color: #3d3d3d;
   overflow:hidden; 
   text-overflow:ellipsis;
   display:-webkit-box; 
@@ -146,6 +204,35 @@ swiper image{
  }
 
  .professor-more{
+  margin-top: -30rpx;
   text-align: right;
   margin-right: 20rpx;
+  color: #d30137;
  }
+
+.pingtai{
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 20rpx;
+  margin-top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 40rpx;
+}
+.pingtai image{
+  width: 46%;
+  height: 120rpx
+}
+.pingtai_title{
+  margin-top: 20rpx;
+  margin-bottom: 0;
+}
+.pingtai_info{
+  margin-top: -10rpx;
+}
+
+.flex-cou{
+  display: flex;
+  flex-direction: column
+}

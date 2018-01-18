@@ -1,13 +1,21 @@
+<import src="../../../untils/wxParse/wxParse.wxml"/>
 <view class='container'>
-  <text class='user-name'>小海</text>
+  <text class='user-name'>{{data.name}}</text>
   <view class='introduce'>
-    <image src='/images/person.jpg' class='user-image'></image>
+    <image src='{{data.thumb}}' class='user-image'></image>
 
    
-  <scroll-view scroll-y="true" class='user-info'>
-     <text class='user-introduce'>asdsadasdasda</text>
-  </scroll-view>
+  <!-- <scroll-view scroll-y="true" class='user-info'>
+      <template is="wxParse" data="{{wxParseData:url.nodes}}"/>
+  </scroll-view> -->
+
+    <view  class='user-info'>
+      <template is="wxParse" data="{{wxParseData:url.nodes}}"/>
+  </view>
   </view>
 
+  <view class='order-box'>
   <view class='order'>立刻预约</view>
+  
+  </view>
 </view>

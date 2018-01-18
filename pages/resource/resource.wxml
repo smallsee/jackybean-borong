@@ -1,7 +1,7 @@
 <view class="container">
-<!--入驻  -->
+  <!--入驻  -->
 
-  
+
   <view class='consultation'>
     <button bindtap='skipJoinFloor' class='consultation-item consultation-phone'>
       <image src='/images/phone.png'></image>
@@ -13,45 +13,100 @@
     </button>
   </view>
 
-<!--nav  -->
-<view class="navbar">  
-  <text wx:for="{{navbar}}" data-idx="{{index}}" class="navbar-item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>  
-</view>  
+  <!--nav  -->
+  <view class="navbar">
+    <text wx:for="{{navbar}}" data-idx="{{index}}" class="navbar-item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+  </view>
 
 
-<view class='project-item' hidden="{{currentTab!=0}}"> 
+  <view class='project-item' hidden="{{currentTab!=0}}">
 
-
-      <view class='news-item' bindtap='skipUser'>
-        <image src='/images/banner4.jpg' class='news-item_image'></image>
-      <view class='news-item_box'>
-       <text class='news-item_title'>小海</text>
-       <view class='news-item_info'>企业</view>
+    <block wx:for="{{data}}" wx:for-item="item" wx:for-index="idx">
+      <view class='news-item' data-id="{{item.id}}" bindtap='skipUser'>
+        <image src='{{item.thumb}}' class='news-item_image'></image>
+        <view class='news-item_box'>
+          <text class='news-item_title'>{{item.name}}</text>
+          <view class='news-item_info'>{{item.nature}}</view>
+        </view>
+        <text class='news-item_text'>{{item.info}}</text>
       </view>
-       
-         <text class='news-item_text'>犀牛之心 媒体</text>
+    </block>
+
+  </view>
+
+  <view class='project-item' hidden="{{currentTab!=1}}">
+
+    <block wx:for="{{data}}" wx:for-item="item" wx:for-index="idx">
+      <view wx:if="{{item.tag == '投资人'}}" class='news-item' data-id="{{item.id}}" bindtap='skipUser'>
+        <image src='{{item.thumb}}' class='news-item_image'></image>
+        <view class='news-item_box'>
+          <text class='news-item_title'>{{item.name}}</text>
+          <view class='news-item_info'>{{item.nature}}</view>
+        </view>
+        <text class='news-item_text'>{{item.info}}</text>
       </view>
+    </block>
+
+  </view>
+
+  <view class='project-item' hidden="{{currentTab!=2}}">
+
+    <block wx:for="{{data}}" wx:for-item="item" wx:for-index="idx">
+      <view wx:if="{{item.tag == '券商'}}" class='news-item' data-id="{{item.id}}" bindtap='skipUser'>
+        <image src='{{item.thumb}}' class='news-item_image'></image>
+        <view class='news-item_box'>
+          <text class='news-item_title'>{{item.name}}</text>
+          <view class='news-item_info'>{{item.nature}}</view>
+        </view>
+        <text class='news-item_text'>{{item.info}}</text>
+      </view>
+    </block>
+
+  </view>
+
+  <view class='project-item' hidden="{{currentTab!=3}}">
+
+    <block wx:for="{{data}}" wx:for-item="item" wx:for-index="idx">
+      <view wx:if="{{item.tag == '经纪人'}}" class='news-item' data-id="{{item.id}}" bindtap='skipUser'>
+        <image src='{{item.thumb}}' class='news-item_image'></image>
+        <view class='news-item_box'>
+          <text class='news-item_title'>{{item.name}}</text>
+          <view class='news-item_info'>{{item.nature}}</view>
+        </view>
+        <text class='news-item_text'>{{item.info}}</text>
+      </view>
+    </block>
+
+  </view>
+
+  <view class='project-item' hidden="{{currentTab!=4}}">
+
+    <block wx:for="{{data}}" wx:for-item="item" wx:for-index="idx">
+      <view wx:if="{{item.tag == '律师'}}" class='news-item' data-id="{{item.id}}" bindtap='skipUser'>
+        <image src='{{item.thumb}}' class='news-item_image'></image>
+        <view class='news-item_box'>
+          <text class='news-item_title'>{{item.name}}</text>
+          <view class='news-item_info'>{{item.nature}}</view>
+        </view>
+        <text class='news-item_text'>{{item.info}}</text>
+      </view>
+    </block>
+
+  </view>
+
+  <view class='project-item' hidden="{{currentTab!=5}}">
+
+    <block wx:for="{{data}}" wx:for-item="item" wx:for-index="idx">
+      <view wx:if="{{item.tag == '会计'}}" class='news-item' data-id="{{item.id}}" bindtap='skipUser'>
+        <image src='{{item.thumb}}' class='news-item_image'></image>
+        <view class='news-item_box'>
+          <text class='news-item_title'>{{item.name}}</text>
+          <view class='news-item_info'>{{item.nature}}</view>
+        </view>
+        <text class='news-item_text'>{{item.info}}</text>
+      </view>
+    </block>
+
+  </view>
 
 </view>
-
-<view class='project-item' hidden="{{currentTab!=1}}">  
-<text>2</text> 
-</view>
-
-<view class='project-item' hidden="{{currentTab!=2}}"> 
-<text>3</text>  
-</view>
-
-<view class='project-item' hidden="{{currentTab!=3}}"> 
-<text>4</text>  
-</view>
-
-<view class='project-item' hidden="{{currentTab!=4}}"> 
-<text>5</text>  
-</view>
-
-<view class='project-item' hidden="{{currentTab!=5}}"> 
-<text>6</text>  
-</view>
-
-</view> 

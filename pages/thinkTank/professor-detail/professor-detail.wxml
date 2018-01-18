@@ -1,22 +1,37 @@
+<import src="../../../untils/wxParse/wxParse.wxml"/>
 <view class='container'>
-  <view class='professor'>
-    <image class='professor-image' src='/images/person.jpg'></image>
-    <text class='professor-text'>小海.......</text>
+  <view class='header'>
+    <image class='header-bg' src='/images/icon/3a.jpg'></image>
+    <view class='user'>
+      <image src='{{data.thumb}}' class='user-image'></image>
+      <view class='user-info-box'>
+        <text class='user-name'>{{data.name}}</text>
+        <view class='white-hengxian'></view>
+        <text class='user-info'>{{data.touyan}}</text>
+        <image bindtap='skipOrderProfessor'  class='call' src='/images/icon/6a.png'></image>
+      </view>
+    </view>
   </view>
 
-  <view class='order'>预约专家</view>
 
-  <view class='project-introduce'>
 
-    <view class='title-box'>
-      <image src='/images/modou_red.png'></image>
-      <text class="title">专家介绍</text>
-    </view>
-    <text class='info'>魔豆启城，品牌管理、传播与营销服务商，总部位于中国广州。</text>
-    <text class='info'>业务主要涵盖品牌整合营销传播、新媒体营销、品牌管理咨询、舆情公关、</text>
-    <text class='info'>品牌形象设计、品牌活动策划与执行、互联网技术应用开发等。</text>
-    <view class='horzition'></view>
-    <view class='ball'></view>
+
+  <view class='main'>
+  <view  class='user-desc'>
+   <text>{{data.info}}</text>
+  </view>
+   
+    <text class='professor-title'>专家优势</text>
+      <view class='red-hengxian'></view>
+      <view class='red-hengxian_small'></view>
+      <view class='user-good'>
+      <text >{{data.good}}</text>
+</view>
+
+   <text class='professor-title'>专家案例</text>
+      <view class='red-hengxian'></view>
+      <view class='red-hengxian_small'></view>
+      <template is="wxParse" data="{{wxParseData:url.nodes}}"/>  
   </view>
 
 </view>

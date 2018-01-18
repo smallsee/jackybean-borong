@@ -3,31 +3,23 @@
   <view class='header'>
     <view class='search'>
       <icon type="search" class="search-img" size="13" color="#405f80"></icon>
-      <input type="text" placeholder="搜索你想要的产品" placeholder-class="placeholder" />
+      <input type="text" placeholder="搜索你想要的产品" placeholder-class="placeholder" value='{{search}}' bindinput="inputSearch" bindconfirm="skipSearch" />
     </view>
   </view>
 
   <!--专家  -->
-    <view class='professor'>
+  <view class='professor'>
     <!-- <text class='professor-title'>专家介绍</text> -->
     <view class='professor-main'>
-      <view class='professor-item'>
-        <image class='professor-item_image' src='/images/person.jpg'></image>
-        <text class='professor-item_text'>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</text>
-      </view>
-      <view class='professor-item'>
-        <image class='professor-item_image' src='/images/person.jpg'></image>
-        <text class='professor-item_text'>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</text>
-      </view>
-
-      <view class='professor-item'>
-        <image class='professor-item_image' src='/images/person.jpg'></image>
-        <text class='professor-item_text'>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</text>
-      </view>
-
-      <view class='professor-item'>
-        <image class='professor-item_image' src='/images/person.jpg'></image>
-        <text class='professor-item_text'>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</text>
+      <block wx:for="{{professors}}" wx:for-item="item" wx:for-index="idx">
+        <view class='professor-item' data-id="{{item.id}}" bindtap='skipProfessorDetail'>
+          <image class='professor-item_image' src='{{item.thumb}}'></image>
+          <text class='professor-item_text'>{{item.name}}</text>
+          <text class='professor-item_info'>{{item.touyan}}</text>
+        </view>
+      </block>
+      <view wx:if="{{professors.length < 1}}">
+        没有关于{{search}}专家的数据，请重新搜索
       </view>
     </view>
   </view>

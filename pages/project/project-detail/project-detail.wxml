@@ -1,4 +1,34 @@
+<import src="../../../untils/wxParse/wxParse.wxml"/>
 <view class="container">
+  <view class='poster'>
+    <image src='{{data.thumb}}' class='poster-image'></image>
+    <image src='{{data.logo}}' class='poster-logo'></image>
+  </view>
+
+  <view class='project-info'>
+    <text class='project-info_text'>{{data.info}}</text>
+  </view>
+  <view class='project-introduce'>
+    <text class='good_head'>项目优势</text>
+    <view class='red-hengxian'></view>
+    <view class='red-hengxian_small'></view>
+    <text class='good_text'>{{data.good}}</text>
+  </view>
+  <!-- <scroll-view scroll-y="true" class='project-main'>
+      <template is="wxParse" data="{{wxParseData:url.nodes}}"/>
+  </scroll-view> -->
+
+  <view class='project-main'>
+    <template is="wxParse" data="{{wxParseData:url.nodes}}"/>
+  </view>
+
+  <view class='consultation-box'>
+    <button open-type="contact" class='consultation'>在线质询</button>
+  </view>
+
+</view>
+
+<!-- <view class="container">
   <view class='poster'>
     <image src='/images/star-detail.jpg' class='poster-image'></image>
     <image src='/images/iqiyi.png' class='poster-logo'></image>
@@ -23,4 +53,4 @@
   </scroll-view>
 
   <view class='consultation'>在线质询</view>
-</view>
+</view> -->

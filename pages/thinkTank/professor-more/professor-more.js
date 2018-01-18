@@ -1,66 +1,55 @@
-// pages/thinkTank/professor-more/professor-more.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
-  data: {
-  
+  data:{
+    search: ''
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
   onShareAppMessage: function () {
-  
+    return {
+      title: '上市培育生态圈',
+      desc: '上市培育生态圈!',
+      imageUrl: '/images/icon/1.jpg',
+      path: '/pages/index/index'
+    }
+  },
+  onLoad: function (option) {
+    var that = this;
+    var search = option.search;
+    if (search) {
+      that.setData({
+        search: search
+      })
+    }
+    that.getData(that.data.search);
+  },
+  getData: function (search) {
+    var that = this;
+    wx.request({
+      url: 'https://www.lifanh.com/api/brprofessor',
+      data:{
+        name: search
+      },
+      header: {},
+      method: 'GET',
+      success: function (res) {
+        that.setData({
+          professors: res.data.data
+        })
+        console.log(that.data.professors)
+      },
+    })
+  },
+  skipProfessorDetail: function (event) {
+    var id = event.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: '../professor-detail/professor-detail?id=' + id,
+    })
+  },
+  inputSearch: function (e) {
+    this.setData({
+      search: e.detail.value
+    })
+  },
+  skipSearch: function () {
+    var search = this.data.search
+    this.getData(search)
   }
 })

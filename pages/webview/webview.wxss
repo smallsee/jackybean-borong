@@ -6,7 +6,7 @@ page{
 .container{
   font-size: 26rpx;
   color: #515151;
-  text-align: center;
+  text-align: left;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;

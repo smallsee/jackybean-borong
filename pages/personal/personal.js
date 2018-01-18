@@ -18,19 +18,20 @@ Page({
     
   },
   onLogin: function() {
-    wx.checkSession({
-        success: function () {
-          //session 未过期，并且在本生命周期一直有效
-        },
-        fail: function () {
-          //登录态过期
-          wx.login() //重新登录
-        }
-      })
   },
-  onlineConsult: function() {
+  skipFloor: function() {
    wx.navigateTo({
-     url: '/pages/onlineConsult/onlineConsult',
+     url: '/pages/onlineConsult/onlineConsult?type=floor',
    })
-  }
+  },
+  skipTank: function () {
+    wx.navigateTo({
+      url: '/pages/onlineConsult/onlineConsult?type=tank',
+    })
+  },
+  skipOrderProfessor: function () {
+    wx.navigateTo({
+      url: '/pages/onlineConsult/onlineConsult?type=orderprofessor',
+    })
+  },
 })

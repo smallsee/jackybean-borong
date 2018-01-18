@@ -3,80 +3,92 @@
   <view class='header'>
     <view class='search'>
       <icon type="search" class="search-img" size="13" color="#405f80"></icon>
-      <input type="text" placeholder="搜索你想要的产品" placeholder-class="placeholder" />
+      <input type="text" placeholder="搜一搜想要寻找的专家" placeholder-class="placeholder" bindinput="inputSearch" bindconfirm="skipSearch"/>
     </view>
   </view>
 
   <!--banner  -->
   <swiper indicator-dots="true" autoplay="true" interval="5000">
     <swiper-item>
-      <image id="7" src="/images/banner4.jpg"></image>
+      <image id="7" src="/images/icon/4a.jpg"></image>
     </swiper-item>
     <swiper-item>
-      <image src="/images/banner3.jpg"></image>
+      <image id="7" src="/images/icon/4a.jpg"></image>
     </swiper-item>
-    <swiper-item>
-      <image src="/images/banner2.jpg"></image>
-    </swiper-item>
+
   </swiper>
 
   <!--质询  -->
-  <view class='consultation'>
-    <button bindtap='callPhone' class='consultation-item consultation-phone'>
-      <image src='/images/phone.png'></image>
-      <text>电话咨询</text>
-    </button>
-    <button open-type="contact" class='consultation-item consultation-online'>
-      <image src='/images/chat.png'></image>
-      <text>在线咨询</text>
-    </button>
-  </view>
 
-  <!--专家  -->
-
-  <view class='professor'>
-    <text class='professor-title'>专家介绍</text>
-    <view class='professor-main'>
-      <view class='professor-item' bindtap='skipProfessorDetail'>
-        <image class='professor-item_image' src='/images/person.jpg'></image>
-        <text class='professor-item_text'>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</text>
-      </view>
-
-           <view class='professor-item' bindtap='skipProfessorDetail'>
-        <image class='professor-item_image' src='/images/person.jpg'></image>
-        <text class='professor-item_text'>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</text>
-      </view>
-
-           <view class='professor-item' bindtap='skipProfessorDetail'>
-        <image class='professor-item_image' src='/images/person.jpg'></image>
-        <text class='professor-item_text'>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</text>
-      </view>
-
-           <view class='professor-item' bindtap='skipProfessorDetail'>
-        <image class='professor-item_image' src='/images/person.jpg'></image>
-        <text class='professor-item_text'>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</text>
-      </view>
+  <view class='padding'>
+    <view class='consultation'>
+      <button bindtap='callPhone' class='consultation-item consultation-phone'>
+        <image src='/images/phone-red.png'></image>
+        <text>电话咨询</text>
+      </button>
+      <button open-type="contact" class='consultation-item consultation-online'>
+        <image src='/images/chat-red.png'></image>
+        <text>在线咨询</text>
+      </button>
     </view>
 
+    <!--专家  -->
+
+    <view class='professor'>
+      <text class='professor-title'>专家介绍</text>
+      <text class='professor-more' bindtap='skipMoreProfessor'>查看更多专家>></text>
+      <view class='red-hengxian'></view>
+      <view class='red-hengxian_small'></view>
+      <view class='professor-main'>
+
+
+        <!-- <view class='professor-item' bindtap='skipProfessorDetail'>
+          <image class='professor-item_image' src='/images/person.jpg'></image>
+          <view class='professor-item_box'>
+              <view  class='professor-item_box_image'>rember</view>
+              <view>
+                         <text class='professor-item_text'>禤嘉海</text>
+                            <text class='professor-item_info'>禤嘉海</text>
+              </view>
     
+          </view>
+         
+        </view> -->
 
-    <text class='professor-more' bindtap='skipMoreProfessor'>更多专家>></text>
-  </view>
+        <block wx:for="{{professors}}" wx:for-item="item" wx:for-index="idx">
+          <view class='professor-item' data-id="{{item.id}}" bindtap='skipProfessorDetail'>
+            <image class='professor-item_image' src='{{item.thumb}}'></image>
+            <view class='professor-item_box'>
+              <!-- <view  class='professor-item_box_image'></view> -->
+              <view>
+                <text class='professor-item_text'>{{item.name}}</text>
+                <text class='professor-item_info'>{{item.touyan}}</text>
+              </view>
 
-  <!--特约平台  -->
+            </view>
 
-  <view class='professor-title'>特约平台</view>
+          </view>
+        </block>
 
-  <view class='consultation'>
+      </view>
 
-    <view bindtap='skipJoinTank' class='consultation-item consultation-phone'>
-      <image src='/images/phone.png'></image>
-      <text>加入智库</text>
     </view>
 
-    <view bindtap='skipJoinTank' class='consultation-item consultation-online'>
-      <image src='/images/chat.png'></image>
-      <text>预约专家</text>
+    <!--特约平台  -->
+    <view class='flex-cou'>
+      <text class='professor-title'>特约平台</text>
+      <view class='red-hengxian'></view>
+      <view class='red-hengxian_small'></view>
+    </view> 
+    <view class='pingtai'>
+
+
+      <image bindtap='skipJoinTank' src='/images/icon/4c.png'></image>
+
+
+
+      <image bindtap='skipOrderProfessor' src='/images/icon/4d.png'></image>
+
     </view>
   </view>
 </view>

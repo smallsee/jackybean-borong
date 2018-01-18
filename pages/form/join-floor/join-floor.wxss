@@ -31,7 +31,11 @@
   border: 2rpx solid #4b556c;
 }
 .input-box input{
+  width: 100%;
   padding: 5rpx 0 10rpx 5rpx;
+}
+.input-box textarea{
+  height: 150rpx;
 }
 .icon{
   margin-top: 15rpx;

@@ -1,7 +1,7 @@
 <view class="container">
   <view class='header'>
     <view class='block-yellow'></view>
-    <text class='header-text'>我的在线咨询</text>
+    <text class='header-text'>我的消息</text>
   </view>
 
   <view class='user'>
@@ -12,15 +12,19 @@
   <view class='horizon'></view>
   <view class='main'>
 
-    <block wx:for="{{userInfo.consult}}" wx:for-item="item" wx:for-index="idx">
+  <block wx:for="{{data}}" wx:for-item="item" wx:for-index="idx">
       <view class='item'>
-        <text class='content' decode="{{true}}">&nbsp;&nbsp;{{item.consult}}</text>
+        <text class='content' decode="{{true}}">&nbsp;&nbsp;{{item.reason}}</text>
         <view class='date'>
-          <text class='time'>2017-12-25</text>
+          <text class='time'>{{item.time}}</text>
           <text class='callback'>待回复</text>
         </view>
       </view>
-    </block>
+  </block>
+
+  <view wx:if="{{data.length < 1}}">
+    没有数据
+  </view>
 
   </view>
 
