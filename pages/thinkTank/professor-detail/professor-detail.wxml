@@ -21,7 +21,7 @@
 
   <view class='main'>
   <view  class='user-desc'>
-   <text>{{data.info}}</text>
+   <text>简介：</text>
   </view>
    
    <view wx:if="{{data.good != '无'}}">
@@ -37,7 +37,9 @@
    <text class='professor-title'>专家介绍</text>
       <view class='red-hengxian'></view>
       <view class='red-hengxian_small'></view>
-      <template is="wxParse" data="{{wxParseData:url.nodes}}"/>  
+      <view class='professor-main-text'>
+        <template is="wxParse" data="{{wxParseData:url.nodes}}"/>  
+      </view>
     </view>
 
 

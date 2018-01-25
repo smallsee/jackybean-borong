@@ -173,7 +173,7 @@ swiper image{
 }
 
  .professor-item_image{
-    width: 300rpx;
+    width: 296rpx;
     max-height: 300rpx;
     border: 2rpx solid #8a8a8a
  }

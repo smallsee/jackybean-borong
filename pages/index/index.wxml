@@ -79,8 +79,8 @@
   <!--今日要闻  -->
   <view class='news'>
     <view class='news-title'>
-      <image src='/images/news.png' class='news-title_image'></image>
-      <text class='news-title_text'>今日要闻</text>
+      <image src='/images/news2.png' class='news-title_image'></image>
+      <text class='news-title_text'>咨询中心</text>
     </view>
 
     <block wx:for="{{newsData}}" wx:for-item="item" wx:for-index="index">

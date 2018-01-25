@@ -3,7 +3,7 @@
   <view class='header'>
     <view class='search'>
       <icon type="search" class="search-img" size="13" color="#405f80"></icon>
-      <input type="text" placeholder="搜索你想要的产品" placeholder-class="placeholder" value='{{search}}' bindinput="inputSearch" bindconfirm="skipSearch" />
+      <input type="text" placeholder="搜索你找到的专家" placeholder-class="placeholder" value='{{search}}' bindinput="inputSearch" bindconfirm="skipSearch" />
     </view>
   </view>
 

@@ -136,3 +136,7 @@
   line-height: 90rpx;
   color: white;
 }
+
+.professor-main-text{
+  line-height: 50rpx;
+}
