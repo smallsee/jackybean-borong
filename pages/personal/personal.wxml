@@ -11,17 +11,17 @@
 <view class='main' wx:if="{{user}}" >
   <view class='consult-box' bindtap='skipFloor'>
     <image class='consult-icon' src='/images/comments.png'></image>
-    <text  class='consult-text' >加入平台消息</text>
+    <text  class='consult-text' >加入平台消息反馈</text>
   </view>
 
   <view class='consult-box' bindtap='skipTank'>
     <image class='consult-icon' src='/images/comments.png'></image>
-    <text  class='consult-text' >加入智库消息</text>
+    <text  class='consult-text' >加入智库消息反馈</text>
   </view>
 
   <view class='consult-box' bindtap='skipOrderProfessor'>
     <image class='consult-icon' src='/images/comments.png'></image>
-    <text  class='consult-text' >预约专家星系</text>
+    <text  class='consult-text' >预约专家信息反馈</text>
   </view>
 </view>
 

@@ -1,16 +1,19 @@
 <import src="../../../untils/wxParse/wxParse.wxml"/>
 <view class='container'>
+
   <view class='header'>
-    <image class='header-bg' src='/images/icon/3a.jpg'></image>
+    <image  class='header-bg' src='/images/icon/aaa.jpg'></image>
+      <image wx:if="{{showBack}}" class='goback' bindtap='goback' src='/images/icon/back.png'></image>
     <view class='user'>
       <image src='{{data.thumb}}' class='user-image'></image>
       <view class='user-info-box'>
         <text class='user-name'>{{data.name}}</text>
         <view class='white-hengxian'></view>
         <text class='user-info'>{{data.touyan}}</text>
-        <image bindtap='skipOrderProfessor'  class='call' src='/images/icon/6a.png'></image>
+        <!-- <image bindtap='skipOrderProfessor'  class='call' src='/images/icon/6a.png'></image> -->
       </view>
     </view>
+  
   </view>
 
 
@@ -21,17 +24,25 @@
    <text>{{data.info}}</text>
   </view>
    
+   <view wx:if="{{data.good != '无'}}">
     <text class='professor-title'>专家优势</text>
       <view class='red-hengxian'></view>
       <view class='red-hengxian_small'></view>
       <view class='user-good'>
       <text >{{data.good}}</text>
+    </view>
 </view>
 
-   <text class='professor-title'>专家案例</text>
+
+   <text class='professor-title'>专家介绍</text>
       <view class='red-hengxian'></view>
       <view class='red-hengxian_small'></view>
       <template is="wxParse" data="{{wxParseData:url.nodes}}"/>  
+    </view>
+
+
+    <view class='consultation-box'>
+    <view  bindtap='skipOrderProfessor' class='consultation'>预约专家</view>
   </view>
 
 </view>

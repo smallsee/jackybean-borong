@@ -2,7 +2,7 @@
 <view class="container">
   <view class='poster'>
     <image src='{{data.thumb}}' class='poster-image'></image>
-    <image src='{{data.logo}}' class='poster-logo'></image>
+    <!-- <image src='{{data.logo}}' class='poster-logo'></image> -->
   </view>
 
   <view class='project-info'>
@@ -23,7 +23,9 @@
   </view>
 
   <view class='consultation-box'>
-    <button open-type="contact" class='consultation'>在线质询</button>
+    <button open-type="contact" class='consultation'>在线咨询</button>
+    <view wx:if="{{hasFav}}" class='consultation fav' bindtap='onFav'>已收藏</view>
+        <view wx:if="{{!hasFav}}" class='consultation fav' bindtap='onFav'>收藏</view>
   </view>
 
 </view>

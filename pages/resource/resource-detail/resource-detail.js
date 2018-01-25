@@ -16,7 +16,7 @@ Page({
           data: res.data.data
         })
         var content = res.data.data.content
-        WxParse.wxParse('url', 'html', content, that, 0);
+        WxParse.wxParse('url', 'html', content, that, 20);
       },
     })
   }

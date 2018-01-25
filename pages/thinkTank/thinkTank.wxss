@@ -60,7 +60,7 @@ swiper{
  }
 swiper image{
      width:100%;
-     height:280rpx;
+     height:300rpx;
  }
 /**/
 .padding{
@@ -115,7 +115,7 @@ swiper image{
 
  .professor-title{
    font-size: 35rpx;
-   font-weight: 600;
+   font-weight: bold;
    color: #d30137;
    text-align: left;
  }
@@ -132,7 +132,7 @@ swiper image{
    margin-top: 5rpx;
  }
  .red-hengxian_small{
-   width: 43%;
+   width: 300rpx;
    height: 2rpx;
    background-color: #d50036;
    margin-top: 6rpx;
@@ -145,11 +145,12 @@ swiper image{
 
 }
 .professor-item{
-   width: 43%;
-  height: 360rpx;
+   width: 300rpx;
+  height: 400rpx;
   box-sizing: border-box;
   padding-top: 10rpx;
   overflow: hidden;
+  margin-bottom: 20rpx;
 }
 .professor-item_box{
   display: flex;
@@ -172,8 +173,8 @@ swiper image{
 }
 
  .professor-item_image{
-    width: 98%;
-    max-height: 250rpx;
+    width: 300rpx;
+    max-height: 300rpx;
     border: 2rpx solid #8a8a8a
  }
  .professor-item_text{

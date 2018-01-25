@@ -51,7 +51,13 @@
 </view>
 
 <view class='project-item' hidden="{{currentTab!=4}}"> 
-
+<block wx:for="{{fav}}" wx:for-item="item" wx:for-index="idx">
+      <view class='news-item' data-id="{{item.project_id}}" bindtap='skipProject'>
+        <image src='{{item.thumb}}' class='news-item_image'></image>
+        <text class='news-item_text news-item_title'>{{item.project}}</text>
+         <text class='news-item_text'>{{item.info}}</text>
+      </view>
+</block>
 </view>
 
 

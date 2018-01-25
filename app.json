@@ -1,20 +1,17 @@
 {
   "pages": [
-        "pages/index/index",
-        "pages/thinkTank/professor-detail/professor-detail",
+    "pages/index/index",
     "pages/thinkTank/thinkTank",
-
+    "pages/project/project",
+    "pages/project/project-detail/project-detail",
+    "pages/thinkTank/professor-detail/professor-detail",
     "pages/form/join-floor/join-floor",
     "pages/form/join-tank/join-tank",
     "pages/form/order-professor/order-professor",
-   
     "pages/personal/personal",
     "pages/onlineConsult/onlineConsult",
-
-    "pages/project/project-detail/project-detail",
     "pages/resource/resource-detail/resource-detail",
     "pages/resource/resource",
-    "pages/project/project",
     "pages/test/test",
     "pages/webview/webview",
     "pages/thinkTank/professor-more/professor-more",

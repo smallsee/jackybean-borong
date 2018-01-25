@@ -96,8 +96,8 @@ page{
 }
 .professor-item{
   margin-top: 10rpx;
-   width: 43%;
-  height: 360rpx;
+   width: 300rpx;
+  height: 400rpx;
   box-sizing: border-box;
   padding-top: 10rpx;
   overflow: hidden;
@@ -123,8 +123,8 @@ page{
 }
 
  .professor-item_image{
-    width: 98%;
-    max-height: 250rpx;
+    width: 300rpx;
+    max-height: 300rpx;
     border: 2rpx solid #8a8a8a
  }
  .professor-item_text{

@@ -1,15 +1,37 @@
 var WxParse = require('../../../untils/wxParse/wxParse.js');
+var app = getApp();
 Page({
   data:{
-    data: {}
+    data: {},
+    showBack: false
   },
   onShareAppMessage: function () {
+    var openid = app.globalData.openid;
     var that = this;
+    wx.getUserInfo({
+      success: function (res) {
+        wx.request({
+          url: 'https://www.lifanh.com/api/brzhuanfa/' ,
+          header: {},
+          method: 'POST',
+          data: {
+            name: res.userInfo.nickName,
+            thumb: res.userInfo.avatarUrl,
+            professor: that.data.data.name,
+            openid: openid
+          },
+          success: function (res_back) {
+            console.log(res_back)
+          },
+        })
+      }
+    })
+
     return {
-      title: '上市培育生态圈',
-      desc: '上市培育生态圈!',
-      imageUrl: '/images/icon/1.jpg',
-      path: '/pages/thinkTank/professor-detail/professor-detail?id=' + that.data.id
+      title: '上市培育生态圈——' + that.data.data.name,
+      desc: '上市培育生态圈——' + that.data.data.name,
+      imageUrl: that.data.thumb,
+      path: '/pages/thinkTank/professor-detail/professor-detail?id=' + that.data.id + '&showBack=true'
     }
   },
   skipOrderProfessor: function () {
@@ -18,8 +40,15 @@ Page({
     })
   },
   onLoad: function(option) {
+  
     var that = this;
     var id = option.id
+    var showBack = option.showBack
+    if (showBack) {
+      that.setData({
+        showBack: true
+      })
+    }
     that.setData({
       id: id
     })
@@ -30,11 +59,17 @@ Page({
       method: 'GET',
       success: function (res) {
         that.setData({
-          data: res.data.data
+          data: res.data.data,
+          thumb: res.data.data.thumb
         })
         var content = res.data.data.case
-        WxParse.wxParse('url', 'html', content, that, 0);
+        WxParse.wxParse('url', 'html', content, that, 20);
       },
+    })
+  },
+  goback:function() {
+    wx.switchTab({
+      url: '../../index/index',
     })
   }
 })
